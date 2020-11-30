@@ -21,6 +21,7 @@ public class ExistingInstanceChecker {
                 System.out.println("Opened port: " + PORT);
                 socket.accept(); // First instance
                 System.out.println("Another instance opened.");
+                socket.close();
                 System.exit(0);
             } catch (IOException e) { // PORT already open, second instance
                 System.out.println("Another instance already running.");
