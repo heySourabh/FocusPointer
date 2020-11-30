@@ -6,6 +6,7 @@ import java.awt.*;
 public class FocusPointer {
 
     public static void main(String[] args) {
+        ExistingInstanceChecker.checkAndExit();
         JFrame baseFrame = new JFrame("Mouse Focus");
         baseFrame.setUndecorated(true);
         int numOfFocus = 10;
