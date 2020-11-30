@@ -1,6 +1,9 @@
 # compiled output folder
 /out/
 
+#scripts
+/script/
+
 # Compiled class file
 *.class
 
