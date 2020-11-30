@@ -1,6 +1,7 @@
 package in.spbhat;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class FocusPointer {
 
@@ -14,6 +15,9 @@ public class FocusPointer {
             new Focus(size, delay, baseFrame);
         }
         baseFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        Image icon = new ImageIcon(FocusPointer.class
+                .getResource("media/cursor.png")).getImage();
+        baseFrame.setIconImage(icon);
         baseFrame.setVisible(true);
     }
 }

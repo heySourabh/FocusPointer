@@ -24,7 +24,6 @@ public class Focus {
                 g.drawImage(cursorImage, 0, 0, this);
             }
         };
-        window.setIconImage(cursorImage);
         window.setBackground(new Color(0.0f, 0.0f, 0.0f, 0.0f));
         window.setAlwaysOnTop(true);
         window.setSize(size, size);
