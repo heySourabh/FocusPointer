@@ -30,6 +30,7 @@ public class Focus {
         window.setSize(size, size);
         window.setLocationRelativeTo(null);
         window.setShape(windowShape);
+        window.setVisible(true);
 
         Thread mouseWatch = new Thread(() -> {
             float opacity = 1.0f;
@@ -44,13 +45,13 @@ public class Focus {
                 double dx = (targetX - frameX) * (1 - delay);
                 double dy = (targetY - frameY) * (1 - delay);
                 double distSqr = dx * dx + dy * dy;
-                if (distSqr < 2) {
+                if (distSqr < 5) {
                     opacity *= 0.8;
                 } else {
                     opacity = 0.5f;
                 }
                 window.setOpacity(opacity);
-                window.setVisible(window.getOpacity() >= 0.1);
+                //window.setVisible(window.getOpacity() >= 0.01);
                 int x = (int) Math.round(frameX + dx);
                 int y = (int) Math.round(frameY + dy);
                 window.setLocation(x, y);

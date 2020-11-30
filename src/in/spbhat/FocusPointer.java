@@ -6,11 +6,13 @@ public class FocusPointer {
 
     public static void main(String[] args) {
         JFrame baseFrame = new JFrame("Mouse Focus");
-        new Focus(50, 0.1, baseFrame);
-        new Focus(45, 0.2, baseFrame);
-        new Focus(40, 0.3, baseFrame);
-        new Focus(35, 0.4, baseFrame);
-        new Focus(30, 0.5, baseFrame);
+        baseFrame.setUndecorated(true);
+        int numOfFocus = 10;
+        for (int focus = 0; focus < numOfFocus; focus++) {
+            int size = 40 - focus * 2;
+            double delay = 0.1 + focus * 0.05;
+            new Focus(size, delay, baseFrame);
+        }
         baseFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         baseFrame.setVisible(true);
     }
